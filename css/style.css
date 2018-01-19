@@ -1,7 +1,14 @@
 /*
-Ryse Son of Rome styles
+Theme Name: Aaron Kenny
+Theme URI: http://www.aaronmkenny.com
+Author: Aaron Kenny
+Author URI: http://www.aaronmkenny.com/
+Description: Custom Wordpress theme for Aaron Kenny
+Version: 1.0.0
+License: GNU General Public License
+License URI: https://www.gnu.org/licenses/gpl.html
+Tags: basic, aaron kenny
 */
-
 @-ms-viewport {
   width: device-width;
 }
@@ -28,6 +35,7 @@ Ryse Son of Rome styles
 body {
   position: relative;
   background: url(../img/background_main.jpg) no-repeat;
+  background-size: cover;
   font-family: "Times New Roman", serif;
   padding-top: 50px;
   margin: 0;
