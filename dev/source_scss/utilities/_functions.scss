@@ -1,0 +1,23 @@
+//////////////////////////////////////////////////
+// SASS FUNCTIONS
+//////////////////////////////////////////////////
+
+// Import if Google Fonts URL is Defined
+@if variable-exists(font__url--local-1) {
+	@font-face {
+		font-family: "Plateia Bold";
+		src: url($font__url--local-1);
+	}
+}
+@if variable-exists(font__url--local-2) {
+	@font-face {
+		font-family: "Plateia Light";
+		src: url($font__url--local-2);
+	}
+}
+@if variable-exists(font__url--google) {
+    @import url($font__url--google);
+}
+@if variable-exists(font__url--icons) {
+    @import url($font__url--icons);
+}

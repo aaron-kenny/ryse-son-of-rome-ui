@@ -1,0 +1,31 @@
+/*
+Theme Name: Aaron Kenny
+Theme URI: http://www.aaronmkenny.com
+Author: Aaron Kenny
+Author URI: http://www.aaronmkenny.com/
+Description: Custom Wordpress theme for Aaron Kenny
+Version: 1.0.0
+License: GNU General Public License
+License URI: https://www.gnu.org/licenses/gpl.html
+Tags: basic, aaron kenny
+*/
+
+//////////////////////////////////////////////////
+// IMPORT ALL SASS PARTIALS
+//////////////////////////////////////////////////
+
+// Utilities
+// SASS variables, mixins, and functions
+@import "utilities/index";
+
+// Base: Default styles applied to elements
+// https://smacss.com/book/type-base
+@import "base/index";
+
+// Layout: Major compenents of a page i.e. header, footer, sidebar
+// https://smacss.com/book/type-layout
+@import "layout/index";
+
+// Modules: Minor compenents that are within layout compenents
+// https://smacss.com/book/type-module
+@import "modules/index";

@@ -1,0 +1,16 @@
+//////////////////////////////////////////////////
+// MUSIC PLAYER
+//////////////////////////////////////////////////
+
+.music-player__mute {
+	position: absolute;
+	top: 50px;
+	right: 0;
+	.mute-icon {
+		width: 42.3px;
+		background: $color__player-bg;
+		color: $color__player-text;
+		font-size: 24px;
+		padding: 10px;
+	}
+}
