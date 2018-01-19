@@ -23,3 +23,22 @@ Auto plays theme music with ability to toggle mute.
     });
 </script>
 ```
+
+### Hover audio effects
+Plays audio effects on menu item hover. Creates a new audio element for each menu item to ensure it never gets cut out.
+```
+<script>
+    // Duplicate the audio so each anchor has it's own file to play.
+    // This will allow them to play simultaneously without interrupting each other.
+    $(".content-box__link").each(function(i) {
+        if (i != 0) { // only clone if more than one needed
+            $("#audioFxSword").clone().attr("id", "audioFxSword-" + i).appendTo($(this).parent());
+        }
+        $(this).data("swordFx", i); // save reference
+    })
+    .mouseenter(function() {
+        $("#audioFxSword-" + $(this).data("swordFx"))[0].play();
+    });
+    $("#audioFxSword").attr("id", "audioFxSword-0"); // get first one into naming convention
+</script>
+```
