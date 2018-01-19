@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>RYSE Son of Rome</title>
+		<script src="https://use.fontawesome.com/81b4e3c6a9.js"></script>
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+	</head>
+	<body>
+		<!-- LAYOUT HEADER -->
+		<header class="layout-header">
+			<div class="container">
+				<!-- MAIN LOGO -->
+				<img class="layout-header__logo" src="img/ryse_logo.png">
+				<!-- PROGRESS BLOCK -->
+				<div class="progress__container">
+					<div class="progress__column progress__column--valor">
+						<div class="progress__points"><img class="progress__icon" src="img/icon_valor.png"/>&nbsp; 172350</div>
+						<div><p class="progress__text">7 - Praetorian</p></div>
+						<div class="progress__bar"><div class="progress__bar-fill"></div></div>
+					</div>
+					<div class="progress__column progress__column--rank">
+						<div class="progress__points"><img class="progress__icon" src="img/icon_rank.png"/>&nbsp; 760</div>
+						<div><p class="progress__text">Rank 26</p></div>
+						<div class="progress__bar"><div class="progress__bar-fill"></div></div>
+					</div>
+					<div class="progress__column">
+						<div class="progress__points"><img class="progress__icon" src="img/icon_xp.png"/>&nbsp; 242350</div>
+					</div>
+				</div>
+				<!-- END PROGRESS BLOCK -->
+			</div>
+		</header>
+		<!-- END LAYOUT HEADER -->
+		<!-- LAYOUT NAV -->
+		<section class="layout-nav">
+			<div class="container">
+				<nav class="layout-nav__container">
+					<ul class="layout-nav__list">
+						<li class="layout-nav__list-item"><a class="layout-nav__link" href="javascript:void(0);">Campaign</a></li>
+						<li class="layout-nav__list-item"><a class="layout-nav__link" href="javascript:void(0);">Gladiator</a></li>
+						<li class="layout-nav__list-item"><a class="layout-nav__link" href="javascript:void(0);">Hero</a></li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+		<!-- END LAYOUT NAV -->
+		<!-- CONTENT BLOCK -->
+		<main class="content">
+			<div class="container">
+				<a class="content-box__link" href="javascript:void(0);">
+					<section class="content-box content-box--50">
+						<div class="content-box__padding-box">
+							<div class="content-box__inner-container">
+								<div class="content-box__text-container">
+									<h2 class="content-box__title">Continue campaign</h2>
+									<p class="content-box__subtitle">S.P.Q.R.</p>
+								</div>
+							</div>
+						</div>
+					</section>
+				</a>
+				<a class="content-box__link" href="javascript:void(0);">
+					<section class="content-box content-box--25">
+						<div class="content-box__padding-box">
+							<div class="content-box__inner-container">
+								<div class="content-box__text-container">
+									<h2 class="content-box__title">Timeline</h2>
+									<p class="content-box__subtitle">94% complete</p>
+								</div>
+							</div>
+						</div>
+					</section>
+				</a>
+				<section class="content-box content-box--25 content-box--last">
+					<a class="content-box__link" href="javascript:void(0);">
+						<section class="content-box--small-top">
+							<div class="content-box__padding-box">
+								<div class="content-box__inner-container">
+									<div class="content-box__text-container">
+										<img class="content-box__icon" src="img/icon_key_white.png"/>
+										<h2 class="content-box__title">Collectables</h2>
+									</div>
+								</div>
+							</div>
+						</section>
+					</a>
+					<a class="content-box__link" href="javascript:void(0);">
+						<section class="content-box--small-bottom">
+							<div class="content-box__padding-box">
+								<div class="content-box__inner-container">
+									<div class="content-box__text-container">
+										<img class="content-box__icon" src="img/icon_valor_white.png"/>
+										<h2 class="content-box__title">Achievements</h2>
+									</div>
+								</div>
+							</div>
+						</section>
+					</a>
+				</section>
+				<div class="content__background" style="background-image: url(img/background_campaign.jpg); background-position: top left;"></div>
+				<div style="display: block; clear: both;"></div>
+			</div>
+		</main>
+		<!-- END CONTENT BLOCK -->
+
+		<!-- BACKGROUND MUSIC -->
+		<audio id="musicPlayer" autoplay loop hidden>
+			<source src="audio/Ryse Son of Rome - Main Theme.mp3" type="audio/mpeg">
+			If you're reading this your browser doesn't support the HTML5 audio element.
+		</audio>
+		<!-- SOUND FX -->
+		<audio id="audioFxSword" preload="auto">
+			<source src="audio/sword.mp3">
+			If you're reading this your browser doesn't support the HTML5 audio element.
+		</audio>
+
+		<!-- MUTE BUTTON -->
+		<a class="music-player__mute" href="javascript:void(0);" onclick="document.getElementById('musicPlayer').muted=!document.getElementById('musicPlayer').muted"><i class="fa fa-volume-up mute-icon" aria-hidden="true"></i></a>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script>
+			// Duplicate the audio so each anchor has it's own file to play.
+			// This will allow them to play simultaneously without interrupting each other.
+			$(".content-box__link").each(function(i) {
+				if (i != 0) { // only clone if more than one needed
+			  		$("#audioFxSword").clone().attr("id", "audioFxSword-" + i).appendTo($(this).parent());
+				}
+				$(this).data("swordFx", i); // save reference
+			})
+			.mouseenter(function() {
+				$("#audioFxSword-" + $(this).data("swordFx"))[0].play();
+			});
+			$("#audioFxSword").attr("id", "audioFxSword-0"); // get first one into naming convention
+
+			// Mute button icon change
+			$(".music-player__mute").click(function(){
+				$(this).find("i").toggleClass("fa-volume-off fa-volume-up");
+			});
+		</script>
+	</body>
+</html>

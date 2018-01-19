@@ -1,0 +1,263 @@
+/*
+Ryse Son of Rome styles
+*/
+
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}
+* {
+  box-sizing: border-box;
+}
+
+*::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+
+*::selection {
+  background: #000;
+  color: #fff;
+}
+
+body {
+  position: relative;
+  background: url(../img/background_main.jpg) no-repeat;
+  font-family: "Times New Roman", serif;
+  padding-top: 50px;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.layout-header__logo {
+  height: 75px;
+}
+
+.layout-nav {
+  margin-top: 50px;
+}
+
+.layout-nav__container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.layout-nav__list {
+  display: -webkit-box;
+  display: flex;
+  width: 90%;
+  padding-left: 0;
+  list-style: none;
+}
+
+.layout-nav__list-item {
+  -webkit-box-flex: 1;
+          flex: 1 1 100%;
+  text-align: center;
+}
+
+.layout-nav__link {
+  color: #323226;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.progress__container {
+  width: 900px;
+  max-width: 100%;
+  float: right;
+}
+
+.progress__column {
+  float: right;
+  width: 33%;
+}
+
+.progress__icon {
+  height: 12px;
+}
+
+.progress__points {
+  font-weight: bold;
+}
+
+.progress__text {
+  color: rgba(26, 26, 26, 0.6);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 5px 0;
+}
+
+.progress__bar {
+  position: relative;
+  width: 90%;
+  height: 5px;
+  border-bottom: 2px solid #aaaaaa;
+}
+
+.progress__bar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 55%;
+  height: 5px;
+  background: #8e1505;
+}
+
+.progress__column--valor .progress__bar-fill {
+  width: 85%;
+  background: #323226;
+}
+
+.content .container {
+  position: relative;
+}
+
+.content-box__link {
+  display: block;
+}
+.content-box__link:hover .content-box__inner-container {
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.content-box {
+  float: left;
+  height: 500px;
+}
+
+.content-box--50 {
+  width: 48%;
+  margin-right: 1%;
+}
+
+.content-box--25 {
+  width: 26%;
+  margin-right: 1%;
+}
+
+.content-box--last {
+  width: 24%;
+  margin-right: 0;
+  border: none;
+}
+
+.content-box__padding-box {
+  float: left;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.content-box__inner-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 5px solid transparent;
+}
+
+.content-box__text-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.content-box__title {
+  font-family: "Times New Roman", serif;
+  font-weight: 300;
+  color: #e9e8e8;
+  text-shadow: 1px 1px 5px #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0 10px;
+  margin-bottom: 0;
+}
+
+.content-box__subtitle {
+  font-size: 20px;
+  color: #d4cdcd;
+  text-shadow: 1px 1px 5px #000;
+  text-transform: uppercase;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  margin-top: 3px;
+}
+
+.content-box--small-top, .content-box--small-bottom {
+  width: 100%;
+  height: 243px;
+  background: url(../img/background_red_grunge.jpg) no-repeat;
+  margin-bottom: 14px;
+}
+.content-box--small-top .content-box__inner-container, .content-box--small-bottom .content-box__inner-container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+.content-box--small-top .content-box__text-container, .content-box--small-bottom .content-box__text-container {
+  position: static;
+}
+.content-box--small-top .content-box__icon, .content-box--small-bottom .content-box__icon {
+  display: block;
+  height: 50px;
+  margin: 0 auto 10px auto;
+}
+.content-box--small-top .content-box__title, .content-box--small-bottom .content-box__title {
+  margin-top: 3px;
+}
+
+.content-box--small-bottom {
+  clear: both;
+}
+
+.content__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  -webkit-mask-image: linear-gradient(to right, #000 48%, transparent 48%, transparent 49%, #000 49%, #000 75%, transparent 75%, transparent 76%);
+          mask-image: linear-gradient(to right, #000 48%, transparent 48%, transparent 49%, #000 49%, #000 75%, transparent 75%, transparent 76%);
+  z-index: -1;
+}
+
+.music-player__mute {
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+.music-player__mute .mute-icon {
+  width: 42.3px;
+  background: #411610;
+  color: #d4cdcd;
+  font-size: 24px;
+  padding: 10px;
+}
