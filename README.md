@@ -1,6 +1,8 @@
+![RYSE Son of Rome UI](/img/screenshots/screenshot-gladiator.jpg?raw=true "RYSE Son of Rome UI")
+
 # RYSE Son of Rome UI
 
-![RYSE Son of Rome UI](/img/screenshots/screenshot-gladiator.jpg?raw=true "RYSE Son of Rome UI")
+The user interface for the video game *Ryse Son of Rome* re-imagined for the web.
 
 ## Features
 
